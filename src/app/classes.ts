@@ -1,5 +1,7 @@
 interface Plant {
     name: string;
+    bloomingMonth: number;
+    getBloomInfo: Function;
 }
 
 interface Months {
@@ -50,7 +52,7 @@ abstract class Tree implements Plant {
     }
 
     getBloomInfo() {
-        return `${monthsHash[this.bloomingMonth]}`;
+        return `In ${monthsHash[this.bloomingMonth]}`;
     }
 
 }
